@@ -1,0 +1,21 @@
+name: Push to Repo B
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo A
+        uses: actions/checkout@v2
+      
+      - name: Push to Repo B
+        uses: github/push@v1
+        with:
+          branch: main
+          directory: content
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: sivadotblog/sivadotblog.github.io
