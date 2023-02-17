@@ -1,4 +1,5 @@
 +++
+archetype = "chapter"
 title ="hello world"
 +++
 
